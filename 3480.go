@@ -4,8 +4,8 @@ func maxSubarrays(n int, conflictingPairs [][]int) int64 {
 	total := int64(n) * int64(n+1) / 2
 	best := int64(0)
 
-    for i, _ := range conflictingPairs {
-        temp := make([][2]int, 0)
+	for i := range conflictingPairs {
+		temp := make([][2]int, 0)
 		for j, p := range conflictingPairs {
 			if i == j {
 				continue
@@ -37,7 +37,7 @@ func maxSubarrays(n int, conflictingPairs [][]int) int64 {
 		}
 	}
 	return best
-    
+
 }
 
 func max(a, b int64) int64 {
